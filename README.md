@@ -4,14 +4,12 @@
 
 > Parse and serialize RFC 9534 Micro-session ID TLVs (Type=11) used in STAMP extensions for Link Aggregation Group (LAG) member-link performance measurement.
 
-[![PyPI version](https://img.shields.io/pypi/v/rfc9534pure.svg)](https://pypi.org/project/rfc9534pure/)
-[![Python](https://img.shields.io/pypi/pyversions/rfc9534pure.svg)](https://pypi.org/project/rfc9534pure/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 ## Quick Start
 
 ```bash
-pip install rfc9534pure
+pip install git+https://github.com/prasad-a-abhishek/rfc-9534-pure.git
 ```
 
 ```python
