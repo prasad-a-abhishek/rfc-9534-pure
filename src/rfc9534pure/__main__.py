@@ -109,3 +109,7 @@ def main(argv=None) -> int:
                       f"usage: rfc9534pure <parse|serialize> ...\n")
     sys.stdout.flush()
     return 2
+
+
+if __name__ == "__main__":
+    sys.exit(main())
