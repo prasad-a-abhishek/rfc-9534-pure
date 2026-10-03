@@ -4,7 +4,7 @@ set -e
 
 echo "=== Pre-push gate: rfc9534-pure ==="
 
-cd "$(dirname "$0")/.."
+cd "$(dirname "$0")"
 
 echo "--- pytest (113 tests) ---"
 python3 -m pytest tests/ -v --tb=short
@@ -17,11 +17,11 @@ python3 -m rfc9534pure serialize 1 2 > /dev/null
 
 echo "--- LOC budget check (≤250 LOC) ---"
 LOC=$(python3 -c "
-import pathlib, tokenize, io
+import pathlib
 total = 0
 for f in pathlib.Path('src/rfc9534pure').glob('*.py'):
-    with io.open(f, 'rb') as fh:
-        total += sum(1 for _ in tokenize.open(fh) if _.type not in (tokenize.COMMENT, tokenize.NL, tokenize.NEWLINE, tokenize.ENCODING))
+    with open(f) as fh:
+        total += sum(1 for line in fh if line.strip() and not line.strip().startswith('#'))
 print(total)
 ")
 echo "Source LOC: $LOC"
@@ -36,4 +36,5 @@ python3 -c "from rfc9534pure import parse_micro_session_tlv, serialize_micro_ses
 echo "--- secret scan ---"
 ! grep -rE "(ghp_|pypi-AgEI|npm_|sk-|AKIA|Bearer ey|BEGIN PRIVATE KEY)" src/ tests/ || exit 1
 
-echo "=== ALL GATES PASSED ==="
+echo ""
+echo "=== VERDICT: SHIP ==="
