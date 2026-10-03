@@ -1,0 +1,85 @@
+{
+  "campaign": "cycle_167/adversary2/T3",
+  "branch": "wt/cycle_167-adversary-02",
+  "chain_base_sha": "70b00a5bcbc52ddfb3d62d8f4eeb8e9425e271c9",
+  "harnesses_commit_sha": "1ba5c2eaa56a30a5ab6b244de115976ca23c0e2d",
+  "fuzzer": "atheris (libFuzzer backend)",
+  "language": "Python 3.11.15",
+  "asan_ubsan": "not linked (atheris no-libasan build; see HARNESSES.md)",
+  "seed_corpus_total": 119,
+  "surfaces_run": [
+    "parse_micro_session_id",
+    "parse_tlv_list",
+    "serialize_roundtrip",
+    "invariant21_boundaries",
+    "cli_main"
+  ],
+  "per_surface": [
+    {
+      "surface": "parse_micro_session_id",
+      "target_iters": 100000,
+      "runs": 100000,
+      "exec_per_sec": 0,
+      "wall_s": 0.11,
+      "crashes": 0,
+      "hangs": 0,
+      "oom": 0,
+      "seed_files": 25,
+      "unique_corpus": 1
+    },
+    {
+      "surface": "parse_tlv_list",
+      "target_iters": 100000,
+      "runs": 100000,
+      "exec_per_sec": 0,
+      "wall_s": 0.1,
+      "crashes": 0,
+      "hangs": 0,
+      "oom": 0,
+      "seed_files": 22,
+      "unique_corpus": 1
+    },
+    {
+      "surface": "serialize_roundtrip",
+      "target_iters": 100000,
+      "runs": 100000,
+      "exec_per_sec": 0,
+      "wall_s": 0.1,
+      "crashes": 0,
+      "hangs": 0,
+      "oom": 0,
+      "seed_files": 26,
+      "unique_corpus": 1
+    },
+    {
+      "surface": "invariant21_boundaries",
+      "target_iters": 100000,
+      "runs": 100000,
+      "exec_per_sec": 0,
+      "wall_s": 0.37,
+      "crashes": 0,
+      "hangs": 0,
+      "oom": 0,
+      "seed_files": 21,
+      "unique_corpus": 1
+    },
+    {
+      "surface": "cli_main",
+      "target_iters": 5275,
+      "runs": 5275,
+      "exec_per_sec": 86,
+      "wall_s": 61.09,
+      "crashes": 0,
+      "hangs": 0,
+      "oom": 0,
+      "seed_files": 25,
+      "unique_corpus": 1
+    }
+  ],
+  "total_iterations": 405275,
+  "total_crashes": 0,
+  "total_hangs": 0,
+  "total_oom": 0,
+  "total_wall_s": 61.77,
+  "verdict": "SHIP"
+}

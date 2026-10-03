@@ -1,0 +1,19 @@
+INFO: Using built-in libfuzzer
+WARNING: Failed to find function "__sanitizer_acquire_crash_state".
+WARNING: Failed to find function "__sanitizer_print_stack_trace".
+WARNING: Failed to find function "__sanitizer_set_death_callback".
+INFO: Running with entropic power schedule (0xFF, 100).
+INFO: Seed: 1933660222
+INFO:       24 files found in cycle_167/adversary2/corpus/cli_main/
+INFO: -max_len is not provided; libFuzzer will not generate inputs larger than 4096 bytes
+INFO: seed corpus: files: 24 min: 2b max: 33b total: 398b rss: 40Mb
+#25	INITED exec/s: 0 rss: 40Mb
+WARNING: no interesting inputs were found so far. Is the code instrumented for coverage?
+This may also happen if the target rejected all inputs we tried so far
+#256	pulse  corp: 1/1b lim: 6 exec/s: 128 rss: 40Mb
+#512	pulse  corp: 1/1b lim: 8 exec/s: 102 rss: 40Mb
+#1024	pulse  corp: 1/1b lim: 14 exec/s: 93 rss: 40Mb
+#2048	pulse  corp: 1/1b lim: 21 exec/s: 89 rss: 40Mb
+#4096	pulse  corp: 1/1b lim: 43 exec/s: 87 rss: 40Mb
+#5275	DONE   corp: 1/1b lim: 53 exec/s: 86 rss: 40Mb
+Done 5275 runs in 61 second(s)
