@@ -1,5 +1,8 @@
 # QA Report — rfc9534-pure v0.1.0 (cycle 167)
 
+tests_passing: true
+tests_total: 113
+
 ## Summary
 
 Independent verification of `rfc-9534-pure` — a zero-dependency RFC 9534 STAMP LAG Micro-session ID TLV parser/serializer — at commit `23d01e6` on master. **113/113 tests pass** in a fresh venv. All 17 documented acceptance criteria have at least one passing test. README claims are honest (113 tests, zero runtime deps, install command works). LOC is within budget (source LOC 294 total across 4 files; pre-push-gate uses non-comment counting = 234). Ruff found 38 linter findings, all Low/Info severity (28 auto-fixable). No secrets found. Pre-push gate green. **VERDICT: SHIP.**
