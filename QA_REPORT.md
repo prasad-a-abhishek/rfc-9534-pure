@@ -194,4 +194,4 @@ OK
 
 All 17 documented acceptance criteria have at least one passing test. 113/113 tests pass. README claims are honest. Zero runtime dependencies. No secrets. Pre-push gate green. Adversarial fuzzing confirms all public APIs return structured errors on malformed input. No critical or high findings.
 
-**VERDICT: SHIP**
+VERDICT: SHIP
